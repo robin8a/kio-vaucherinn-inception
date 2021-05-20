@@ -45,3 +45,33 @@ from bundler (>= 1.3.0, < 2.0) to bundler (>= 1.3.0, <= 2.1.4)
 RAILS_ENV=development bundle update devise
 
 ```
+
+# Failed to install gems via Bundler.
+
+remote:        Downloading rails-5.0.1 revealed dependencies not in the API or the lockfile
+remote:        (bundler (>= 1.3.0, < 2.0)).
+remote:        Either installing with `--full-index` or running `bundle update rails` should
+remote:        fix the problem.
+remote: 
+remote:  !
+remote:  !     Failed to install gems via Bundler.
+remote:  !
+remote:  !     Push rejected, failed to compile Ruby app.
+remote: 
+remote:  !     Push failed
+remote: Verifying deploy...
+
+*** works ***
+```sh
+RAILS_ENV=development bundle update rails
+RAILS_ENV=production bundle update rails
+
+RAILS_ENV=development bundle update
+RAILS_ENV=production bundle update
+
+gcam "
+
+```
+# Sprockets::FileNotFound: couldn't find file 'bootstrap-table' with type 'application/javascript'
+- https://github.com/bjevanchiu/bootstrap-table-rails/issues/1
+- https://gorails.com/forum/issue-with-bootstrap-sprockets-in-application-js
